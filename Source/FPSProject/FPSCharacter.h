@@ -28,6 +28,10 @@ public:
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
     class UCameraComponent* FirstPersonCameraComponent;
     
+    // Pawn mesh: 1st person view, arms seen only by self
+    UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
+    class USkeletalMeshComponent* FirstPersonMesh;
+    
 protected:
     
     virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;

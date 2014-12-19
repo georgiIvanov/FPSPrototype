@@ -14,6 +14,15 @@ AFPSCharacter::AFPSCharacter(const FObjectInitializer& ObjectInitializer)
     FirstPersonCameraComponent->RelativeLocation = FVector(0, 0, BaseEyeHeight);
     // allow the pawn to control rotation
     FirstPersonCameraComponent->bUsePawnControlRotation = true;
+    
+    FirstPersonMesh = ObjectInitializer.CreateDefaultSubobject<USkeletalMeshComponent>(this, TEXT("FirstPersonMesh"));
+    FirstPersonMesh->SetOnlyOwnerSee(true);
+    FirstPersonMesh->AttachParent = FirstPersonCameraComponent;
+    FirstPersonMesh->bCastDynamicShadow = false;
+    FirstPersonMesh->CastShadow = false;
+    
+    // full sized mesh cannot be seen by owner
+    GetMesh()->SetOwnerNoSee(true);
 }
 
 void AFPSCharacter::BeginPlay()
