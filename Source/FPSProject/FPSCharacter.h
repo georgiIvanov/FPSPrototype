@@ -19,6 +19,12 @@ public:
     
     virtual void BeginPlay() override;
 	
+    UFUNCTION()
+    void OnStartJump();
+    
+    UFUNCTION()
+    void OnStopJump();
+    
 protected:
     
     virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
