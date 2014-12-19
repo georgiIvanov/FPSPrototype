@@ -3,11 +3,12 @@
 #include "FPSProject.h"
 #include "FPSGameMode.h"
 #include "Engine.h"
+#include "FPSCharacter.h"
 
 AFPSGameMode::AFPSGameMode(const FObjectInitializer& ObjectInitializer)
 : Super(ObjectInitializer)
 {
-    
+    DefaultPawnClass = AFPSCharacter::StaticClass();
 }
 
 void AFPSGameMode::StartPlay()
