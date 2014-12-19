@@ -6,7 +6,14 @@
 AFPSCharacter::AFPSCharacter(const FObjectInitializer& ObjectInitializer)
 : Super(ObjectInitializer)
 {
+    // create camera component
+    FirstPersonCameraComponent = ObjectInitializer.CreateDefaultSubobject<UCameraComponent>(this, TEXT("FirstPersonCamera"));
+    FirstPersonCameraComponent->AttachParent = GetCapsuleComponent();
     
+    // position the camera a bit above the eyes
+    FirstPersonCameraComponent->RelativeLocation = FVector(0, 0, BaseEyeHeight);
+    // allow the pawn to control rotation
+    FirstPersonCameraComponent->bUsePawnControlRotation = true;
 }
 
 void AFPSCharacter::BeginPlay()

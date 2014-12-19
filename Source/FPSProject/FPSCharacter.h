@@ -25,6 +25,9 @@ public:
     UFUNCTION()
     void OnStopJump();
     
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
+    class UCameraComponent* FirstPersonCameraComponent;
+    
 protected:
     
     virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
