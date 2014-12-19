@@ -43,6 +43,7 @@ void AFPSCharacter::SetupPlayerInputComponent(class UInputComponent *InputCompon
     InputComponent->BindAxis("LookUp", this, &AFPSCharacter::AddControllerPitchInput);
     InputComponent->BindAction("Jump", IE_Pressed, this, &AFPSCharacter::OnStartJump);
     InputComponent->BindAction("Jump", IE_Released, this, &AFPSCharacter::OnStopJump);
+    InputComponent->BindAction("Fire", IE_Pressed, this, &AFPSCharacter::OnFire);
 }
 
 void AFPSCharacter::OnStartJump()
@@ -83,5 +84,40 @@ void AFPSCharacter::MoveRight(float Value)
         // add movement in that direction
         const FVector Direction = FRotationMatrix(Rotation).GetScaledAxis(EAxis::Y);
         AddMovementInput(Direction, Value);
+    }
+}
+
+void AFPSCharacter::OnFire()
+{
+    if(ProjectileClass == nullptr)
+    {
+        return;
+    }
+    
+    // get camera transform
+    FVector CameraLoc;
+    FRotator CameraRot;
+    GetActorEyesViewPoint(CameraLoc, CameraRot);
+    
+    // MuzzleOffset is in camera space, so transform it to world space
+    // before offsetting from the camera to find the final muzzle position
+    FVector const MuzzleLocation = CameraLoc + FTransform(CameraRot).TransformVector(MuzzleOffset);
+    FRotator MuzzleRotation = CameraRot;
+    // skew the aim a bit upwards
+    MuzzleRotation.Pitch += 10.f;
+    UWorld* const World = GetWorld();
+    if(World)
+    {
+        FActorSpawnParameters SpawnParams;
+        SpawnParams.Owner = this;
+        SpawnParams.Instigator = Instigator;
+        // spawn projectile at muzzle
+        AFPSProjectile* const Projectile = World->SpawnActor<AFPSProjectile>(ProjectileClass, MuzzleLocation, MuzzleRotation, SpawnParams);
+        if(Projectile)
+        {
+            // find launch direction
+            FVector const LaunchDir = MuzzleRotation.Vector();
+            Projectile->InitVelocity(LaunchDir);
+        }
     }
 }

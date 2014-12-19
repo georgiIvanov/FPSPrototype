@@ -3,6 +3,7 @@
 #pragma once
 
 #include "GameFramework/Character.h"
+#include "FPSProjectile.h"
 #include "FPSCharacter.generated.h"
 
 /**
@@ -25,12 +26,23 @@ public:
     UFUNCTION()
     void OnStopJump();
     
+    UFUNCTION()
+    void OnFire();
+    
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera)
     class UCameraComponent* FirstPersonCameraComponent;
     
     // Pawn mesh: 1st person view, arms seen only by self
     UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
     class USkeletalMeshComponent* FirstPersonMesh;
+    
+    // Gun muzzle's offset from the camera location
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
+    FVector MuzzleOffset;
+    
+    // Projectile class to spawn
+    UPROPERTY(EditDefaultsOnly, Category = Projectile)
+    TSubclassOf<class AFPSProjectile> ProjectileClass;
     
 protected:
     
