@@ -19,3 +19,41 @@ void AFPSCharacter::BeginPlay()
     }
 }
 
+void AFPSCharacter::SetupPlayerInputComponent(class UInputComponent *InputComponent)
+{
+    InputComponent->BindAxis("MoveForward", this, &AFPSCharacter::MoveForward);
+    InputComponent->BindAxis("MoveRight", this, &AFPSCharacter::MoveRight);
+    InputComponent->BindAxis("Turn", this, &AFPSCharacter::AddControllerYawInput);
+    InputComponent->BindAxis("LookUp", this, &AFPSCharacter::AddControllerPitchInput);
+}
+
+void AFPSCharacter::MoveForward(float Value)
+{
+    if(Controller != nullptr && Value != 0.f)
+    {
+        // find out which way is forward
+        FRotator Rotation = Controller->GetControlRotation();
+        
+        // limit pitch when walking or falling
+        if(GetCharacterMovement()->IsMovingOnGround() || GetCharacterMovement()->IsFalling())
+        {
+            Rotation.Pitch = 0.f;
+        }
+        
+        // add movement in that direction
+        const FVector Direction = FRotationMatrix(Rotation).GetScaledAxis(EAxis::X);
+        AddMovementInput(Direction, Value);
+    }
+}
+
+void AFPSCharacter::MoveRight(float Value)
+{
+    if(Controller != nullptr && Value != 0.f)
+    {
+        // find out which way is right
+        FRotator Rotation = Controller->GetControlRotation();
+        // add movement in that direction
+        const FVector Direction = FRotationMatrix(Rotation).GetScaledAxis(EAxis::Y);
+        AddMovementInput(Direction, Value);
+    }
+}
