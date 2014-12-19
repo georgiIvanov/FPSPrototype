@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7298C535FFB31C2F2A0DF4D3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85596FB6CE91F8C3DCE657E0 /* UE4CmdLineRun.m */; };
+		6395010B83F189E14504CF28 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6028181650C886C91A9FBED0 /* UE4CmdLineRun.m */; };
 		EB41FF261F9FC8B1D0C3E278 /* FPSProject.uproject in Sources */ = {isa = PBXBuildFile; fileRef = 15A34CDBDF6AF17442A5BC38 /* FPSProject.uproject */; };
 		0A3DDCAAADBB1E0F483C7C1C /* FPSProject.Target.cs in Sources */ = {isa = PBXBuildFile; fileRef = B64C3FA889BE2718F09D3BB4 /* FPSProject.Target.cs */; };
 		1603690C9E11E4DCF8C3AA03 /* FPSProjectEditor.Target.cs in Sources */ = {isa = PBXBuildFile; fileRef = E87B71283A2450FDB3AFA02A /* FPSProjectEditor.Target.cs */; };
@@ -20,12 +20,14 @@
 		6794620630FEBAD2DC3F0D88 /* FPSProject.h in Sources */ = {isa = PBXBuildFile; fileRef = 172A2FE00FA3A092B5E62089 /* FPSProject.h */; };
 		62FB6C873C96032511FA6EC9 /* FPSProjectGameMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2B4B2C61992407D66A50C05 /* FPSProjectGameMode.cpp */; };
 		63F8E93B4F26364282679766 /* FPSProjectGameMode.h in Sources */ = {isa = PBXBuildFile; fileRef = 3B062016257A479AC48AD30A /* FPSProjectGameMode.h */; };
+		3FA8A87A97F953207905EFD6 /* FPSProjectile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5AFC04FBD5F38228F027F30F /* FPSProjectile.cpp */; };
+		5398D4EC0E13B1437FE44C78 /* FPSProjectile.h in Sources */ = {isa = PBXBuildFile; fileRef = CB393D8791A3E41315F82216 /* FPSProjectile.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6029578830DA638243DE8E0B /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		85596FB6CE91F8C3DCE657E0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		96CE19817589E2ADB05AEA5C /* libUE4XcodeHelper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUE4XcodeHelper.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		29A0CBF10248C211A6964760 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		6028181650C886C91A9FBED0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9F2433E3DDF5735319F1FD5F /* libUE4XcodeHelper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUE4XcodeHelper.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A34CDBDF6AF17442A5BC38 /* FPSProject.uproject */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "FPSProject.uproject"; path = "FPSProject.uproject"; sourceTree = SOURCE_ROOT; };
 		B64C3FA889BE2718F09D3BB4 /* FPSProject.Target.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "FPSProject.Target.cs"; path = "Source/FPSProject.Target.cs"; sourceTree = SOURCE_ROOT; };
 		E87B71283A2450FDB3AFA02A /* FPSProjectEditor.Target.cs */ = {isa = PBXFileReference; lastKnownFileType = file.text; name = "FPSProjectEditor.Target.cs"; path = "Source/FPSProjectEditor.Target.cs"; sourceTree = SOURCE_ROOT; };
@@ -38,63 +40,65 @@
 		172A2FE00FA3A092B5E62089 /* FPSProject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "FPSProject.h"; path = "Source/FPSProject/FPSProject.h"; sourceTree = SOURCE_ROOT; };
 		C2B4B2C61992407D66A50C05 /* FPSProjectGameMode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = "FPSProjectGameMode.cpp"; path = "Source/FPSProject/FPSProjectGameMode.cpp"; sourceTree = SOURCE_ROOT; };
 		3B062016257A479AC48AD30A /* FPSProjectGameMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "FPSProjectGameMode.h"; path = "Source/FPSProject/FPSProjectGameMode.h"; sourceTree = SOURCE_ROOT; };
-		FEEA0ACBF22F717F5CD7FC7F /* UE4CmdLineRun.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Engine/Binaries/IOS/Payload/UE4CmdLineRun.xctest; sourceTree = "<group>"; };
-		B6E3B10D4331CA89EC7F74CF /* FPSProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FPSProject/Binaries/IOS/Payload/FPSProject.app; sourceTree = "<group>"; };
-		8205A358E2152CFE8E29FF95 /* FPSProject-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "FPSProject-Info.plist"; path = FPSProject/Build/IOS/FPSProject-Info.plist; sourceTree = "<group>"; };
+		5AFC04FBD5F38228F027F30F /* FPSProjectile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = "FPSProjectile.cpp"; path = "Source/FPSProject/FPSProjectile.cpp"; sourceTree = SOURCE_ROOT; };
+		CB393D8791A3E41315F82216 /* FPSProjectile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "FPSProjectile.h"; path = "Source/FPSProject/FPSProjectile.h"; sourceTree = SOURCE_ROOT; };
+		D1C6A0CFDB0094D8E35C577D /* UE4CmdLineRun.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Engine/Binaries/IOS/Payload/UE4CmdLineRun.xctest; sourceTree = "<group>"; };
+		52225273DFF1A3D468C1577A /* FPSProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FPSProject/Binaries/IOS/Payload/FPSProject.app; sourceTree = "<group>"; };
+		A642C9A4EACF852E707BE498 /* FPSProject-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "FPSProject-Info.plist"; path = FPSProject/Build/IOS/FPSProject-Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXContainerItemProxy section */
-		C12804AC350EC6F717FBAA24 /* PBXContainerItemProxy */ = {
+		8EDC84F240C130AC4F53FC41 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3FA8A87A97F953207905EFD6 /* Project object */;
+			containerPortal = 27AFC5D77CBF58FB29C42D1E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B9DA2287E06D554F82C141CF;
+			remoteGlobalIDString = 6857F8EAE30E1EA7348C407F;
 			remoteInfo = "FPSProject - Mac";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXTargetDependency section */
-		BE9C3077E1F943F41CD9821F /* PBXTargetDependency */ = {
+		3397B24CD189DA9D64548528 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B9DA2287E06D554F82C141CF /* FPSProject - Mac */;
-			targetProxy = C12804AC350EC6F717FBAA24 /* PBXContainerItemProxy */;
+			target = 6857F8EAE30E1EA7348C407F /* FPSProject - Mac */;
+			targetProxy = 8EDC84F240C130AC4F53FC41 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXGroup section */
-		6395010B83F189E14504CF28 = {
+		59952E5C4D77A32301346879 = {
 			isa = PBXGroup;
 			children = (
-				21D9D0723294109053C165D6 /* Source */,
-				ED6930AA51E76419FB1077F1 /* Products */,
-				B2D9AA3E670D813F94CCA209 /* Frameworks */,
+				B2D9AA3E670D813F94CCA209 /* Source */,
+				49E3819C9451B63FB240A287 /* Products */,
+				8ECEEA9EC2004E8ED775D5ED /* Frameworks */,
 				15A34CDBDF6AF17442A5BC38 /* FPSProject.uproject */,
 			);
 			sourceTree = "<group>";
 		};
-		ED6930AA51E76419FB1077F1 = {
+		49E3819C9451B63FB240A287 = {
 			isa = PBXGroup;
 			children = (
-				96CE19817589E2ADB05AEA5C /* libUE4XcodeHelper.a */,
-				FEEA0ACBF22F717F5CD7FC7F /* UE4CmdLineRun.xctest */,
-				B6E3B10D4331CA89EC7F74CF /* FPSProject.app */,
+				9F2433E3DDF5735319F1FD5F /* libUE4XcodeHelper.a */,
+				D1C6A0CFDB0094D8E35C577D /* UE4CmdLineRun.xctest */,
+				52225273DFF1A3D468C1577A /* FPSProject.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8ECEEA9EC2004E8ED775D5ED = {
+			isa = PBXGroup;
+			children = (
+				29A0CBF10248C211A6964760 /* OpenGLES.framework */,
+				6028181650C886C91A9FBED0 /* XCTest.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		B2D9AA3E670D813F94CCA209 = {
 			isa = PBXGroup;
 			children = (
-				6029578830DA638243DE8E0B /* OpenGLES.framework */,
-				85596FB6CE91F8C3DCE657E0 /* XCTest.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		21D9D0723294109053C165D6 = {
-			isa = PBXGroup;
-			children = (
-				C6B2FF7FBB0C6ED89AB58424 /* FPSProject */,
+				A7A660A86F7E71ADB7EF07CA /* FPSProject */,
 				B64C3FA889BE2718F09D3BB4 /* FPSProject.Target.cs */,
 				E87B71283A2450FDB3AFA02A /* FPSProjectEditor.Target.cs */,
 			);
@@ -102,7 +106,7 @@
 			path = "Source";
 			sourceTree = "<group>";
 		};
-		C6B2FF7FBB0C6ED89AB58424 = {
+		A7A660A86F7E71ADB7EF07CA = {
 			isa = PBXGroup;
 			children = (
 				D2A29D200257CBB89990085E /* FPSCharacter.cpp */,
@@ -114,6 +118,8 @@
 				172A2FE00FA3A092B5E62089 /* FPSProject.h */,
 				C2B4B2C61992407D66A50C05 /* FPSProjectGameMode.cpp */,
 				3B062016257A479AC48AD30A /* FPSProjectGameMode.h */,
+				5AFC04FBD5F38228F027F30F /* FPSProjectile.cpp */,
+				CB393D8791A3E41315F82216 /* FPSProjectile.h */,
 			);
 			name = "FPSProject";
 			path = "Source/FPSProject";
@@ -122,7 +128,7 @@
 /* End PBXGroup section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6C80F057548241D7663CECC5 /* ShellScript */ = {
+		B5F64B35230992EDF2421C69 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -131,7 +137,7 @@
 			shellPath = /bin/sh;
 			shellScript = "if [ $DEPLOYMENT_LOCATION = \"YES\" ]\nthen\ncp -R Engine/Binaries/IOS/Payload/libUE4XcodeHelper.a/ $DSTROOT/$LOCAL_APPS_DIR/libUE4XcodeHelper.a\nfi";
 		};
-		71691D23B02BEEDBB5650509 /* ShellScript */ = {
+		B055C80CF81A0379101047B9 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -140,7 +146,7 @@
 			shellPath = /bin/sh;
 			shellScript = "if [ $DEPLOYMENT_LOCATION = \"YES\" ]\nthen\ncp -R Engine/Binaries/IOS/Payload/UE4CmdLineRun.xctest/ $DSTROOT/$LOCAL_APPS_DIR/UE4CmdLineRun.xctest\nfi";
 		};
-		827F628BDE26193DCAF04501 /* ShellScript */ = {
+		813DBB2C8FA8488CB2A0850E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -152,29 +158,29 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A0F2B9613D802C986390EF91 /* Sources */ = {
+		96CE19817589E2ADB05AEA5C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3B66A14872D7F21020815DDD /* Sources */ = {
+		FEEA0ACBF22F717F5CD7FC7F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C07DCF5AAAB848C47CD221DD /* UE4CmdLineRun.m in Sources */,
+				21D9D0723294109053C165D6 /* UE4CmdLineRun.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8EDC84F240C130AC4F53FC41 /* Sources */ = {
+		B6E3B10D4331CA89EC7F74CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A0F2B9613D802C986390EF91 /* Sources */ = {
+		96CE19817589E2ADB05AEA5C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -182,28 +188,29 @@
 				BA17F0F9190FC96B2FBA2912 /* FPSGameMode.cpp in Sources */,
 				F8EE3A7C52D9DFE2A62935E1 /* FPSProject.cpp in Sources */,
 				62FB6C873C96032511FA6EC9 /* FPSProjectGameMode.cpp in Sources */,
+				3FA8A87A97F953207905EFD6 /* FPSProjectile.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F065836E73C8A2F3415E76E1 /* Frameworks */ = {
+		E21DA3825FF65243B4288416 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A5628470F317DFBC0AC94CF2 /* Frameworks */ = {
+		5A273BE58904752506AD7474 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7298C535FFB31C2F2A0DF4D3 /* XCTest.framework in Frameworks */,
+				6395010B83F189E14504CF28 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6B676F2A98C0EE04EF057E70 /* Frameworks */ = {
+		D3F7EB5710545DE17AF0B5C9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -213,10 +220,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXLegacyTarget section */
-		B9DA2287E06D554F82C141CF /* FPSProject - Mac */ = {
+		6857F8EAE30E1EA7348C407F /* FPSProject - Mac */ = {
 			isa = PBXLegacyTarget;
 			buildArgumentsString = "$(ACTION) FPSProject $(PLATFORM_NAME) $(CONFIGURATION) \"$(PROJECT_DIR)/FPSProject.uproject\"";
-			buildConfigurationList = 7A3B692D8EC585BB3FD0F8FD /* Build configuration list for PBXLegacyTarget "FPSProject - Mac" */;
+			buildConfigurationList = 0C2D366B707949B120CA6EBD /* Build configuration list for PBXLegacyTarget "FPSProject - Mac" */;
 			buildPhases = (
 			);
 			buildToolPath = "/Users/Shared/UnrealEngine/4.6/Engine/Build/BatchFiles/Mac/RocketBuild.sh";
@@ -227,10 +234,10 @@
 			passBuildSettingsInEnvironment = 0;
 			productName = "FPSProject - Mac";
 		};
-		A4D012BA00E942CE3E13ED28 /* FPSProjectEditor - Mac */ = {
+		C9593CE068915DC38157E739 /* FPSProjectEditor - Mac */ = {
 			isa = PBXLegacyTarget;
 			buildArgumentsString = "$(ACTION) FPSProjectEditor $(PLATFORM_NAME) $(CONFIGURATION) \"$(PROJECT_DIR)/FPSProject.uproject\"";
-			buildConfigurationList = 2543E95ABE6FE1549428744A /* Build configuration list for PBXLegacyTarget "FPSProjectEditor - Mac" */;
+			buildConfigurationList = 43FF059A291EA3F7D26D7626 /* Build configuration list for PBXLegacyTarget "FPSProjectEditor - Mac" */;
 			buildPhases = (
 			);
 			buildToolPath = "/Users/Shared/UnrealEngine/4.6/Engine/Build/BatchFiles/Mac/RocketBuild.sh";
@@ -244,84 +251,84 @@
 /* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
-		8CA5EF6672C374DB7D05FB2D /* UE4XcodeHelper */ = {
+		F065836E73C8A2F3415E76E1 /* UE4XcodeHelper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 946A116CFB87339CF0E95285 /* Build configuration list for PBXNativeTarget "UE4XcodeHelper" */;
+			buildConfigurationList = 6C80F057548241D7663CECC5 /* Build configuration list for PBXNativeTarget "UE4XcodeHelper" */;
 			buildPhases = (
-				A0F2B9613D802C986390EF91 /* Sources */,
-				F065836E73C8A2F3415E76E1 /* Frameworks */,
-				6C80F057548241D7663CECC5 /* ShellScript */,
+				96CE19817589E2ADB05AEA5C /* Sources */,
+				E21DA3825FF65243B4288416 /* Frameworks */,
+				B5F64B35230992EDF2421C69 /* ShellScript */,
 			);
 			dependencies = (
 			);
 			name = "UE4XcodeHelper";
 			productName = "UE4XcodeHelper";
-			productReference = 96CE19817589E2ADB05AEA5C /* libUE4XcodeHelper.a */;
+			productReference = 9F2433E3DDF5735319F1FD5F /* libUE4XcodeHelper.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		CD2B4BAAD044778F03B18500 /* UE4CmdLineRun */ = {
+		A5628470F317DFBC0AC94CF2 /* UE4CmdLineRun */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2165E139F0A34D8E3CE54651 /* Build configuration list for PBXNativeTarget "UE4CmdLineRun" */;
+			buildConfigurationList = 71691D23B02BEEDBB5650509 /* Build configuration list for PBXNativeTarget "UE4CmdLineRun" */;
 			buildPhases = (
-				3B66A14872D7F21020815DDD /* Sources */,
-				A5628470F317DFBC0AC94CF2 /* Frameworks */,
-				71691D23B02BEEDBB5650509 /* ShellScript */,
+				FEEA0ACBF22F717F5CD7FC7F /* Sources */,
+				5A273BE58904752506AD7474 /* Frameworks */,
+				B055C80CF81A0379101047B9 /* ShellScript */,
 			);
 			dependencies = (
 			);
 			name = "UE4CmdLineRun";
 			productName = "UE4CmdLineRun";
-			productReference = FEEA0ACBF22F717F5CD7FC7F /* UE4CmdLineRun.xctest */;
+			productReference = D1C6A0CFDB0094D8E35C577D /* UE4CmdLineRun.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B03F597AB2B51615D8B0AFF4 /* FPSProject - iOS */ = {
+		6B676F2A98C0EE04EF057E70 /* FPSProject - iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DA2F44CA29214A2137DCF1B8 /* Build configuration list for PBXNativeTarget "FPSProject - iOS" */;
+			buildConfigurationList = 827F628BDE26193DCAF04501 /* Build configuration list for PBXNativeTarget "FPSProject - iOS" */;
 			buildPhases = (
-				8EDC84F240C130AC4F53FC41 /* Sources */,
-				6B676F2A98C0EE04EF057E70 /* Frameworks */,
-				827F628BDE26193DCAF04501 /* ShellScript */,
+				B6E3B10D4331CA89EC7F74CF /* Sources */,
+				D3F7EB5710545DE17AF0B5C9 /* Frameworks */,
+				813DBB2C8FA8488CB2A0850E /* ShellScript */,
 			);
 			dependencies = (
-				BE9C3077E1F943F41CD9821F /* PBXTargetDependency */
+				3397B24CD189DA9D64548528 /* PBXTargetDependency */
 			);
 			name = "FPSProject - iOS";
 			productName = "FPSProject - iOS";
-			productReference = B6E3B10D4331CA89EC7F74CF /* FPSProject.app */;
+			productReference = 52225273DFF1A3D468C1577A /* FPSProject.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3FA8A87A97F953207905EFD6 /* Project object */ = {
+		27AFC5D77CBF58FB29C42D1E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = EpicGames;
 			};
-			buildConfigurationList = 5AFC04FBD5F38228F027F30F /* Build configuration list for PBXProject "UE4" */;
+			buildConfigurationList = 2D19E2F2734BF246E70BD9BE /* Build configuration list for PBXProject "UE4" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 6395010B83F189E14504CF28;
-			productRefGroup = ED6930AA51E76419FB1077F1 /* Products */;
+			mainGroup = 59952E5C4D77A32301346879;
+			productRefGroup = 49E3819C9451B63FB240A287 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8CA5EF6672C374DB7D05FB2D /* UE4XcodeHelper */,
-				CD2B4BAAD044778F03B18500 /* UE4CmdLineRun */,
-				B9DA2287E06D554F82C141CF /* FPSProject - Mac */,
-				B03F597AB2B51615D8B0AFF4 /* FPSProject - iOS */,
-				A4D012BA00E942CE3E13ED28 /* FPSProjectEditor - Mac */,
+				F065836E73C8A2F3415E76E1 /* UE4XcodeHelper */,
+				A5628470F317DFBC0AC94CF2 /* UE4CmdLineRun */,
+				6857F8EAE30E1EA7348C407F /* FPSProject - Mac */,
+				6B676F2A98C0EE04EF057E70 /* FPSProject - iOS */,
+				C9593CE068915DC38157E739 /* FPSProjectEditor - Mac */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin XCBuildConfiguration section */
-		5AF5BED3BA91583CD0B049CF /* DebugGame */ = {
+		56F3EA26B079EBBD04D58035 /* DebugGame */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -626,7 +633,7 @@
 			};
 			name = DebugGame;
 		};
-		D711B1FC4DEE60CF3FB6188C /* Development */ = {
+		8CA5EF6672C374DB7D05FB2D /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -931,7 +938,7 @@
 			};
 			name = Development;
 		};
-		D9C0999C542D97A8C7B043A0 /* Shipping */ = {
+		946A116CFB87339CF0E95285 /* Shipping */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1236,7 +1243,7 @@
 			};
 			name = Shipping;
 		};
-		7F1BB64FDEE27BED79E2B518 /* DebugGame */ = {
+		7A3B692D8EC585BB3FD0F8FD /* DebugGame */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1282,7 +1289,7 @@
 			};
 			name = DebugGame;
 		};
-		5A273BE58904752506AD7474 /* Development */ = {
+		6029578830DA638243DE8E0B /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1328,7 +1335,7 @@
 			};
 			name = Development;
 		};
-		B055C80CF81A0379101047B9 /* Shipping */ = {
+		85596FB6CE91F8C3DCE657E0 /* Shipping */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1374,7 +1381,7 @@
 			};
 			name = Shipping;
 		};
-		1654B573D83F1CDE6DF27747 /* DebugGame */ = {
+		DA2F44CA29214A2137DCF1B8 /* DebugGame */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1395,7 +1402,7 @@
 			};
 			name = DebugGame;
 		};
-		6C5905C5B1D5F1E6EBB9395F /* Development */ = {
+		C12804AC350EC6F717FBAA24 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1416,7 +1423,7 @@
 			};
 			name = Development;
 		};
-		D38ACCF96672675D26E8C3DD /* Shipping */ = {
+		BE9C3077E1F943F41CD9821F /* Shipping */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1437,7 +1444,7 @@
 			};
 			name = Shipping;
 		};
-		AF8DCEC0EFCB86B2FEA83E67 /* DebugGame */ = {
+		4CD3C1AEC16D37E04EBBD2C6 /* DebugGame */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"PRODUCT_NAME[sdk=iphoneos*]" = "FPSProject";
@@ -1464,7 +1471,7 @@
 			};
 			name = DebugGame;
 		};
-		D3F7EB5710545DE17AF0B5C9 /* Development */ = {
+		8205A358E2152CFE8E29FF95 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"PRODUCT_NAME[sdk=iphoneos*]" = "FPSProject";
@@ -1491,7 +1498,7 @@
 			};
 			name = Development;
 		};
-		813DBB2C8FA8488CB2A0850E /* Shipping */ = {
+		A4D012BA00E942CE3E13ED28 /* Shipping */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"PRODUCT_NAME[sdk=iphoneos*]" = "FPSProject";
@@ -1518,7 +1525,7 @@
 			};
 			name = Shipping;
 		};
-		7CC7A084A4947195A832482C /* DebugGame */ = {
+		F196C5FC16156EAB49EAFE0A /* DebugGame */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1531,7 +1538,7 @@
 			};
 			name = DebugGame;
 		};
-		29FC17BCBC00AB4007D219E1 /* Development */ = {
+		C07DCF5AAAB848C47CD221DD /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1544,7 +1551,7 @@
 			};
 			name = Development;
 		};
-		6625E8CDC53215948FA96C65 /* Shipping */ = {
+		83E49F832E856FD17DB68599 /* Shipping */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1557,7 +1564,7 @@
 			};
 			name = Shipping;
 		};
-		D4EC617B37E0C926B965EFD1 /* DebugGame */ = {
+		D30D71E001591145B07C34E6 /* DebugGame */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1578,7 +1585,7 @@
 			};
 			name = DebugGame;
 		};
-		E21DA3825FF65243B4288416 /* Development */ = {
+		CD2B4BAAD044778F03B18500 /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1599,7 +1606,7 @@
 			};
 			name = Development;
 		};
-		B5F64B35230992EDF2421C69 /* Shipping */ = {
+		2165E139F0A34D8E3CE54651 /* Shipping */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1623,62 +1630,62 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5AFC04FBD5F38228F027F30F /* Build configuration list for PBXProject "UE4" */ = {
+		2D19E2F2734BF246E70BD9BE /* Build configuration list for PBXProject "UE4" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5AF5BED3BA91583CD0B049CF /* DebugGame */,
-				D711B1FC4DEE60CF3FB6188C /* Development */,
-				D9C0999C542D97A8C7B043A0 /* Shipping */,
+				56F3EA26B079EBBD04D58035 /* DebugGame */,
+				8CA5EF6672C374DB7D05FB2D /* Development */,
+				946A116CFB87339CF0E95285 /* Shipping */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Development;
 		};
-		2165E139F0A34D8E3CE54651 /* Build configuration list for PBXNativeTarget "UE4CmdLineRun" */ = {
+		71691D23B02BEEDBB5650509 /* Build configuration list for PBXNativeTarget "UE4CmdLineRun" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7F1BB64FDEE27BED79E2B518 /* DebugGame */,
-				5A273BE58904752506AD7474 /* Development */,
-				B055C80CF81A0379101047B9 /* Shipping */,
+				7A3B692D8EC585BB3FD0F8FD /* DebugGame */,
+				6029578830DA638243DE8E0B /* Development */,
+				85596FB6CE91F8C3DCE657E0 /* Shipping */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Development;
 		};
-		7A3B692D8EC585BB3FD0F8FD /* Build configuration list for PBXLegacyTarget "FPSProject - Mac" */ = {
+		0C2D366B707949B120CA6EBD /* Build configuration list for PBXLegacyTarget "FPSProject - Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1654B573D83F1CDE6DF27747 /* DebugGame */,
-				6C5905C5B1D5F1E6EBB9395F /* Development */,
-				D38ACCF96672675D26E8C3DD /* Shipping */,
+				DA2F44CA29214A2137DCF1B8 /* DebugGame */,
+				C12804AC350EC6F717FBAA24 /* Development */,
+				BE9C3077E1F943F41CD9821F /* Shipping */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Development;
 		};
-		DA2F44CA29214A2137DCF1B8 /* Build configuration list for PBXNativeTarget "FPSProject - iOS" */ = {
+		827F628BDE26193DCAF04501 /* Build configuration list for PBXNativeTarget "FPSProject - iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AF8DCEC0EFCB86B2FEA83E67 /* DebugGame */,
-				D3F7EB5710545DE17AF0B5C9 /* Development */,
-				813DBB2C8FA8488CB2A0850E /* Shipping */,
+				4CD3C1AEC16D37E04EBBD2C6 /* DebugGame */,
+				8205A358E2152CFE8E29FF95 /* Development */,
+				A4D012BA00E942CE3E13ED28 /* Shipping */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Development;
 		};
-		2543E95ABE6FE1549428744A /* Build configuration list for PBXLegacyTarget "FPSProjectEditor - Mac" */ = {
+		43FF059A291EA3F7D26D7626 /* Build configuration list for PBXLegacyTarget "FPSProjectEditor - Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7CC7A084A4947195A832482C /* DebugGame */,
-				29FC17BCBC00AB4007D219E1 /* Development */,
-				6625E8CDC53215948FA96C65 /* Shipping */,
+				F196C5FC16156EAB49EAFE0A /* DebugGame */,
+				C07DCF5AAAB848C47CD221DD /* Development */,
+				83E49F832E856FD17DB68599 /* Shipping */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Development;
 		};
-		946A116CFB87339CF0E95285 /* Build configuration list for PBXNativeTarget "UE4XcodeHelper" */ = {
+		6C80F057548241D7663CECC5 /* Build configuration list for PBXNativeTarget "UE4XcodeHelper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D4EC617B37E0C926B965EFD1 /* DebugGame */,
-				E21DA3825FF65243B4288416 /* Development */,
-				B5F64B35230992EDF2421C69 /* Shipping */,
+				D30D71E001591145B07C34E6 /* DebugGame */,
+				CD2B4BAAD044778F03B18500 /* Development */,
+				2165E139F0A34D8E3CE54651 /* Shipping */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Development;
@@ -1686,5 +1693,5 @@
 /* End XCConfigurationList section */
 
 	};
-	rootObject = 3FA8A87A97F953207905EFD6 /* Project object */;
+	rootObject = 27AFC5D77CBF58FB29C42D1E /* Project object */;
 }
