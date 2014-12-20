@@ -3,6 +3,7 @@
 #include "FPSProject.h"
 #include "FPSGameMode.h"
 #include "Engine.h"
+#include "FPSHUD.h"
 
 AFPSGameMode::AFPSGameMode(const FObjectInitializer& ObjectInitializer)
 : Super(ObjectInitializer)
@@ -13,6 +14,9 @@ AFPSGameMode::AFPSGameMode(const FObjectInitializer& ObjectInitializer)
     {
         DefaultPawnClass = (UClass*)PlayerPawnObject.Object->GeneratedClass;
     }
+    
+    HUDClass = AFPSHUD::StaticClass();
+    
 }
 
 void AFPSGameMode::StartPlay()
