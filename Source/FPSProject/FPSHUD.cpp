@@ -6,7 +6,7 @@
 AFPSHUD::AFPSHUD(const FObjectInitializer& ObjectInitializer)
 : Super(ObjectInitializer)
 {
-    static ConstructorHelpers::FObjectFinder<UTexture2D> CrosshairTexObj(TEXT("Texture2D'/Game/Props/crosshair_green_bgWhite.crosshair_green_bgWhite'"));
+    static ConstructorHelpers::FObjectFinder<UTexture2D> CrosshairTexObj(TEXT("Texture2D'/Game/Props/crosshair.crosshair'"));
     CrosshairTex = CrosshairTexObj.Object;
     
 }
@@ -27,7 +27,7 @@ void AFPSHUD::DrawHUD()
     // draw the crosshair
     FCanvasTileItem TileItem(CrosshairDrawPosition, CrosshairTex->Resource, FLinearColor::White);
     // from tutorial mode is SE_BLEND_Translucent
-    TileItem.BlendMode = SE_BLEND_Modulate;
+    TileItem.BlendMode = SE_BLEND_Translucent;
     Canvas->DrawItem(TileItem);
 }
 
